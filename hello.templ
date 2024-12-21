@@ -1,0 +1,33 @@
+package main
+
+templ home() {
+<html data-theme="retro">
+
+<head>
+    <script type="module" src="https://cdn.jsdelivr.net/gh/starfederation/datastar/bundles/datastar.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.22/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="hero bg-base-200 min-h-screen">
+        <div class="hero-content text-center">
+            <div class="max-w-md">
+                <h1 class="text-5xl font-bold">Hello D*</h1>
+                <p class="py-6">
+                    My first Golang + D* Test
+                </p>
+                <input type="text" class="input" data-bind-name></input>
+                <button class="btn btn-primary" data-on-click="sse('/hello')">Say Hello</button>
+                <div id="message">&nbsp;</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+}
+
+templ hello(name string) {
+<div id="message">Hello, {name}</div>
+}
